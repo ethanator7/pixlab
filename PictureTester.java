@@ -20,8 +20,21 @@ public class PictureTester
   public static void testKeepOnlyBlue()
   {
     Picture beach = new Picture("beach.jpg");
-    beach.explore();
     beach.keepOnlyBlue();
+    beach.explore();
+  }
+  
+  public static void testNegate()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.negate();
+    beach.explore();
+  }
+  
+  public static void testGrayscale()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.grayscale();
     beach.explore();
   }
   
@@ -31,6 +44,22 @@ public class PictureTester
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
+    caterpillar.explore();
+  }
+  
+  public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }
+  
+  public static void testMirrorHorizontal()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
     caterpillar.explore();
   }
   
@@ -54,7 +83,7 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
+    Picture swan = new Picture("water.jpg");
     swan.edgeDetection(10);
     swan.explore();
   }
@@ -70,10 +99,12 @@ public class PictureTester
     testKeepOnlyBlue();
     // testKeepOnlyRed();
     // testKeepOnlyGreen();
-    // testNegate();
-    // testGrayscale();
+    testNegate();
+    testGrayscale();
     // testFixUnderwater();
-    // testMirrorVertical();
+    testMirrorVertical();
+    testMirrorVerticalRightToLeft();
+    testMirrorHorizontal();
     // testMirrorTemple();
     // testMirrorArms();
     // testMirrorGull();
