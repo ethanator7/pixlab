@@ -63,13 +63,37 @@ public class PictureTester
     caterpillar.explore();
   }
   
+  public static void testMirrorHorizontalBotToTop()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
+    caterpillar.explore();
+  }
+  
   /** Method to test mirrorTemple */
+  public static void testMirrorArms()
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+  
   public static void testMirrorTemple()
   {
     Picture temple = new Picture("temple.jpg");
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
+  }
+  
+  public static void testMirrorGull()
+  {
+    Picture gull = new Picture("seagull.jpg");
+    gull.explore();
+    gull.mirrorGull();
+    gull.explore();
   }
   
   /** Method to test the collage method */
@@ -80,11 +104,25 @@ public class PictureTester
     canvas.explore();
   }
   
+  public static void testMyCollage()
+  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
+    canvas.explore();
+  }
+  
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("water.jpg");
+    Picture swan = new Picture("swan.jpg");
     swan.edgeDetection(10);
+    swan.explore();
+  }
+  
+  public static void testEdgeDetectionTopToBottom()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.edgeDetectionTopToBottom(10);
     swan.explore();
   }
   
@@ -105,14 +143,16 @@ public class PictureTester
     testMirrorVertical();
     testMirrorVerticalRightToLeft();
     testMirrorHorizontal();
-    // testMirrorTemple();
-    // testMirrorArms();
-    // testMirrorGull();
+    testMirrorHorizontalBotToTop();
+    testMirrorTemple();
+    testMirrorArms();
+    testMirrorGull();
     // testMirrorDiagonal();
-    // testCollage();
+    testCollage();
+    testMyCollage();
     // testCopy();
     testEdgeDetection();
-    // testEdgeDetection2();
+    testEdgeDetectionTopToBottom();
     // testChromakey();
     // testEncodeAndDecode();
     // testGetCountRedOverValue(250);
